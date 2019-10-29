@@ -1,14 +1,7 @@
 package com.ecomapp;
 
-import java.util.stream.Stream;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import com.ecomapp.dao.UserRepository;
-import com.ecomapp.model.User;
 
 @SpringBootApplication
 public class EcommerceApplication {
@@ -29,5 +22,5 @@ public class EcommerceApplication {
 			userRepository.findAll().forEach(System.out::println);
 		};
 	} */
-	
+
 	}

@@ -50,7 +50,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
@@ -61,5 +61,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+   <!--  mvn spring-boot:run  -->
 
 </project>
