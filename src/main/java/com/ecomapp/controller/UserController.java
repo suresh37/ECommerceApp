@@ -12,7 +12,7 @@ import com.ecomapp.dao.UserRepository;
 import com.ecomapp.model.User;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200","https://4200-b2a3aa64-8f85-4105-a6c0-4cbcded98460.ws-ap0.gitpod.io"})
 public class UserController {
 
 	private final UserRepository userRepository;
@@ -22,7 +22,7 @@ public class UserController {
 		super();
 		this.userRepository = userRepository;
 	}
-    
+
 	@GetMapping("/users")
 	public List<User> getUsers()
 	{
