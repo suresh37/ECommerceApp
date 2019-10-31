@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+      <h2>product Details</h2>
+		<p></p>
+	</div>
+	<div class="row">
+		<div *ngIf="product">
+			Name: {{product.name}}
+			Price: {{product.price | currency: 'INR':true}}
+			Category: {{product.category}}
+		</div>
+	</div>
+</div>

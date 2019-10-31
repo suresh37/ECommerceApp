@@ -1,12 +1,44 @@
 <div class="container">
-  <h2>Phone details in cards</h2>
-  <p></p>
-  <div class="card" style="width:300px">
-
-    <div class="card-body">
-      <h4 class="card-title">IPhone 11</h4>
-      <p class="card-text">Description</p>
-      <a href="#" class="btn btn-primary stretched-link">See details</a>
-    </div>
-  </div>
+	<div class="row">
+		<h2>Our products</h2>
+		<p></p>
+	</div>
+	<div class="row">
+		<div *ngFor="let product of products" class="card mr-4" style="width: 300px;">
+			<div class="card-body">
+				<h4 class="card-title">{{ product.name }}</h4>
+				<p class="card-text">{{ product.desc }}</p>
+				<p> {{ product.price | currency: 'INR':true}}</p>
+				<hr />
+				<p (click)="selectProduct(product)" class="">See details...</p>
+      </div>
+		</div>
+	</div>
 </div>
+
+<app-product-detail [product]="selectedProduct"></app-product-detail>
+
+<!-- <div class="card my-5">
+	<div class="card-body">
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">Link</th>
+					<th scope="col">Category</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let product of products">
+					<td>{{ product.productId }}</td>
+					<td>{{ product.name }}</td>
+					<td>{{ product.price }}</td>
+					<td><a [href]="product.url">see more</a></td>
+					<td>{{ product.category }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div> -->

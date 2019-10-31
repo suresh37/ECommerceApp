@@ -10,6 +10,8 @@ import { UserService } from './service/user-service.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
+import { ProductService } from './service/product.service';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ProductComponent } from './product/product.component';
     UserFormComponent,
     NavbarComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { ProductComponent } from './product/product.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
